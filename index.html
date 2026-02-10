@@ -184,33 +184,59 @@ section {
 }
 
 /* ---------- PROJECTS ---------- */
-.cards {
+
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
 }
 
-.card {
-  background: rgba(2, 6, 23, 0.8);
+.project-card {
+  background: rgba(2, 6, 23, 0.85);
   border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.card h3 {
-  margin-bottom: 8px;
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
 }
 
-.card p {
-  color: #94a3b8;
-  font-size: 14px;
-  margin-bottom: 14px;
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
-.card a {
-  color: #38bdf8;
+.project-info {
+  padding: 20px;
+}
+
+.project-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e5e7eb;
   text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.project-title:hover {
+  color: #38bdf8;
+}
+
+.project-role {
   font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.project-company {
+  font-size: 13px;
+  color: #64748b;
 }
 
 /* ---------- SKILLS ---------- */
@@ -302,17 +328,17 @@ footer {
   </div>
 </header>
 
-/* ---------- HERO ---------- */
+<!-- HERO -->
 <section id="hero">
   <div class="hero-box">
 
     <!-- PROFILE IMAGE -->
     <div class="profile-pic">
-      <img src="Aromal_sarasan.jpg" alt="Aromal Sarasan">
+      <img src="Aromal_sarasan.png" alt="Aromal Sarasan">
     </div>
 
     <!-- INTRO -->
-    <p class="intro">Hi, I’m</p>
+    <p class="intro">___Hi, I’m___</p>
 
     <h1>Aromal Sarasan</h1>
 
@@ -326,7 +352,7 @@ footer {
 
     <!-- SOCIAL ICONS -->
     <div class="hero-socials">
-      <a href="mailto:aromalsaras@gmail.com" title="Email">
+      <a href="#contact" title="Email">
         <i class="fa-solid fa-envelope"></i>
       </a>
 
@@ -350,40 +376,69 @@ footer {
       </a>
     </div>
 
-
-
   </div>
 </section>
 
   
-
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <h2 class="section-title">Featured Projects</h2>
-    <p class="section-sub">Selected BIM projects delivered at consultant and project level</p>
+    <p class="section-sub">Selected BIM projects delivered across sectors</p>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Six Senses – Wadi Safar</h3>
-        <p>BIM Manager · Hospitality</p>
-        <a href="#">View Project →</a>
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <a href="projects-six-senses.html" class="project-image">
+          <img src="assets/projects/six-senses.jpg" alt="Six Senses Wadi Safar">
+        </a>
+
+        <div class="project-info">
+          <a href="projects-six-senses.html" class="project-title">
+            Six Senses – Wadi Safar
+          </a>
+          <p class="project-role">BIM Manager</p>
+          <p class="project-company">Technical Expert Group (TXG)</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Armed Forces Hospital</h3>
-        <p>BIM Lead · Healthcare</p>
-        <a href="#">View Project →</a>
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <a href="projects-armed-forces.html" class="project-image">
+          <img src="assets/projects/armed-forces.jpg" alt="Armed Forces Hospital">
+        </a>
+
+        <div class="project-info">
+          <a href="projects-armed-forces.html" class="project-title">
+            Armed Forces Hospital
+          </a>
+          <p class="project-role">Senior BIM Coordinator</p>
+          <p class="project-company">ECEC</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Commercial Mixed-Use Development</h3>
-        <p>BIM Manager / Coordinator</p>
-        <a href="#">View Project →</a>
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <a href="projects-commercial.html" class="project-image">
+          <img src="assets/projects/commercial.jpg" alt="Commercial Project">
+        </a>
+
+        <div class="project-info">
+          <a href="projects-commercial.html" class="project-title">
+            Commercial Mixed-Use Development
+          </a>
+          <p class="project-role">BIM Coordinator</p>
+          <p class="project-company">Shapoorji Pallonji</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
+
+<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <h2 class="section-title">BIM Capabilities</h2>
