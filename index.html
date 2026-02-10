@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aromal Sarasan | BIM Manager</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 /* ---------- RESET ---------- */
 * {
@@ -69,6 +71,39 @@ nav a:hover {
 .hero-box {
   max-width: 700px;
 }
+
+.hero-buttons i {
+  margin-right: 8px;
+}
+
+.hero-socials {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.hero-socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  color: #cbd5f5;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.hero-socials a:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
 
 .profile-pic {
   width: 180px;
@@ -268,11 +303,32 @@ footer {
 </header>
 
 <section id="hero">
-  <div class="hero-box">
-    <div class="profile-pic">
-      <img src="Aromal_Sarasan.png" alt="Aromal Sarasan">
-    </div>
-    <p class="intro">HI, I’M</p>
+<div class="hero-buttons">
+  <a href="#projects" class="btn-primary">
+    <i class="fa-solid fa-arrow-down"></i> View Projects
+  </a>
+
+  <a href="assets/Aromal_Sarasan_Resume.pdf"
+     class="btn-secondary"
+     download>
+    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+  </a>
+</div>
+
+<div class="hero-socials">
+  <a href="mailto:aromalsaras@gmail.com" title="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="www.linkedin.com/in/aromal-sarasan"
+     target="_blank"
+     title="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+</div>
+
+
+    <p class="intro">Hi, I’m</p>
     <h1>Aromal Sarasan</h1>
     <h2>BIM Manager | Senior BIM Coordinator</h2>
     <p class="hero-desc">
