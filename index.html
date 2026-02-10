@@ -249,20 +249,40 @@ section {
   color: #64748b;
 }
 
-/* ---------- SKILLS ---------- */
-.skills-grid {
+/* ---------- SKILLS (ICON STYLE) ---------- */
+
+.skills-grid-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
 }
 
-.skills-grid div {
-  background: rgba(2, 6, 23, 0.8);
+.skill-icon-card {
+  background: rgba(2, 6, 23, 0.85);
   border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 18px;
+  padding: 30px 20px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-icon-card img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.skill-icon-card span {
+  display: block;
   font-size: 14px;
+  color: #e5e7eb;
+}
+
+.skill-icon-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
 }
 
 /* ---------- EXPERIENCE ---------- */
@@ -514,20 +534,50 @@ footer {
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <h2 class="section-title">BIM Capabilities</h2>
-    <div class="skills-grid">
-      <div>BIM Strategy & Governance</div>
-      <div>ISO 19650 Implementation</div>
-      <div>BIM Execution Plans (BEP)</div>
-      <div>Information Management (MIDP / TIDP)</div>
-      <div>Multidisciplinary Coordination</div>
-      <div>Clash Detection & QA/QC</div>
-      <div>COBie & Data Delivery</div>
-      <div>Team Training & Reporting</div>
+
+    <h2 class="section-title">BIM Skills</h2>
+    <p class="section-sub">
+      Tools, platforms, and standards used across BIM delivery
+    </p>
+
+    <div class="skills-grid-icons">
+
+      <div class="skill-icon-card">
+        <img src="assets/projects/confidential.png" alt="Revit">
+        <span>Autodesk Revit</span>
+      </div>
+
+      <div class="skill-icon-card">
+        <img src="assets/projects/ensan.png" alt="Navisworks">
+        <span>Navisworks Manage</span>
+      </div>
+
+      <div class="skill-icon-card">
+        <img src="assets/skills/acc.png" alt="ACC">
+        <span>BIM 360 / ACC</span>
+      </div>
+
+      <div class="skill-icon-card">
+        <img src="assets/skills/iso19650.png" alt="ISO 19650">
+        <span>ISO 19650</span>
+      </div>
+
+      <div class="skill-icon-card">
+        <img src="assets/skills/cobie.png" alt="COBie">
+        <span>COBie</span>
+      </div>
+
+      <div class="skill-icon-card">
+        <img src="assets/skills/coordination.png" alt="Coordination">
+        <span>Model Coordination</span>
+      </div>
+
     </div>
+
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <h2 class="section-title">Experience</h2>
