@@ -65,7 +65,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 70px 20px;
 }
 
 .hero-box {
@@ -291,16 +291,14 @@ section {
   border-color: #38bdf8;
 }
 
-.skill-box {
-  max-width: 700px;
-}
+
 
 /* ---------- EXPERIENCE ---------- */
 
 /* ================= EXPERIENCE SECTION ================= */
 
 #experience {
-  padding: 70px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -394,22 +392,97 @@ section {
 /* ================= EDUCATION SECTION ================= */
 
 #education {
-  padding: 70px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 /* Green timeline line for education */
 #education .timeline::before {
-  background: #14b8a6;
+  background: #2563eb;
   box-shadow: 0 0 10px rgba(20, 184, 166, 0.6);
 }
 
 /* Green icon for education */
 #education .timeline-icon {
-  border-color: #14b8a6;
-  color: #14b8a6;
+  border-color: #2563eb;
+  color: #2563eb;
 }
 
+/* ================= CERTIFICATIONS ================= */
+
+#certifications {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.cert-card {
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.cert-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-6px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.cert-card h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 18px;
+  min-height: 48px;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.cert-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+  
+/* Ongoing styling */
+.cert-card.ongoing {
+  border-color: #f59e0b;
+}
+
+.cert-status {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+  
 /* ---------- CONTACT ---------- */
 #contact {
   text-align: center;
@@ -821,6 +894,73 @@ footer {
 
 
 <!-- CERTIFICATION -->
+<section id="certifications">
+  <div class="container">
+
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-sub">
+      Professional certifications and industry credentials
+    </p>
+
+    <div class="cert-grid">
+
+      <!-- CERTIFICATE 1 -->
+      <div class="cert-card">
+        <img src="assets/certificates/rics-bim.jpg" alt="RICS BIM Certificate">
+
+        <h3>RICS BIM Management Certification</h3>
+
+        <a href="https://credential-link.com"
+           target="_blank"
+           class="cert-btn">
+          View Credential
+        </a>
+      </div>
+
+      <!-- CERTIFICATE 2 -->
+      <div class="cert-card">
+        <img src="assets/certificates/revit-cert.jpg" alt="Revit Certificate">
+
+        <h3>Autodesk Revit Professional Certification</h3>
+
+        <a href="https://credential-link.com"
+           target="_blank"
+           class="cert-btn">
+          View Credential
+        </a>
+      </div>
+
+      <!-- ONGOING CERTIFICATE 3 -->
+      <div class="cert-card ongoing">
+      
+        <img src="assets/certificates/rics-bim.jpg"
+             alt="RICS BIM Management">
+      
+        <h3>RICS BIM Management Certification</h3>
+      
+        <span class="cert-status">
+          Ongoing
+        </span>
+      
+      </div>
+
+      <!-- CERTIFICATE 4 -->
+      <div class="cert-card">
+        <img src="assets/certificates/iso19650.jpg" alt="ISO 19650 Certificate">
+
+        <h3>ISO 19650 BIM Implementation Training</h3>
+
+        <a href="https://credential-link.com"
+           target="_blank"
+           class="cert-btn">
+          View Credential
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   
 <!-- CONTACT -->
 <section id="contact">
