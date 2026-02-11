@@ -487,17 +487,6 @@ section {
   text-align: center;
 }
 
-.contact-title {
-  font-size: 36px;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.contact-subtitle {
-  color: #94a3b8;
-  margin-bottom: 50px;
-  font-size: 15px;
-}
 
 /* FORM CARD */
 .contact-form {
@@ -1026,35 +1015,39 @@ footer {
 </section>
   
 <!-- CONTACT -->
+  
 <section id="contact">
-  <h2 class="contact-title">Get in touch</h2>
-  <p class="contact-subtitle">
-    Interested in collaborating or discussing a BIM opportunity? Feel free to reach out.
-  </p>
-
-  <form
-    id="contact-form"
-    class="contact-form"
-    action="https://formspree.io/f/mbdarbbd"
-    method="POST"
-  >
-    <label>
-      Name *
-      <input type="text" name="name" required>
-    </label>
-
-    <label>
-      Email Address *
-      <input type="email" name="email" required>
-    </label>
-
-    <label>
-      Message *
-      <textarea name="message" rows="4" required></textarea>
-    </label>
-
-    <button type="submit">SEND</button>
-  </form>
+  <div class="container">
+      
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-sub">
+      Interested in collaborating or discussing a BIM opportunity? Feel free to reach out.
+    </p>
+  
+    <form
+      id="contact-form"
+      class="contact-form"
+      action="https://formspree.io/f/mbdarbbd"
+      method="POST"
+    >
+      <label>
+        Name *
+        <input type="text" name="name" required>
+      </label>
+  
+      <label>
+        Email Address *
+        <input type="email" name="email" required>
+      </label>
+  
+      <label>
+        Message *
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+  
+      <button type="submit">SEND</button>
+    </form>
+  </div>
 </section>
 
 <script>
