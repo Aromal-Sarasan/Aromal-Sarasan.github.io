@@ -291,75 +291,87 @@ section {
   border-color: #38bdf8;
 }
 
+.skill-box {
+  max-width: 700px;
+}
+
 /* ---------- EXPERIENCE ---------- */
+
+
+/* ================= EXPERIENCE SECTION ================= */
 
 #experience {
   padding: 100px 20px;
 }
 
+.experience-box {
+  max-width: 700px;
+}
+
 .timeline {
   position: relative;
   margin-top: 60px;
-  padding-left: 80px;
 }
 
+/* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 28px;
+  left: 40px;
   top: 0;
   width: 2px;
   height: 100%;
   background: #1e293b;
 }
 
+/* Each row */
 .timeline-item {
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 24px;
   margin-bottom: 70px;
+  padding-left: 100px;
 }
 
-/* Blue glowing dot */
+/* Blue dot */
 .timeline-dot {
   position: absolute;
-  left: 22px;
-  top: 18px;
+  left: 34px;
+  top: 32px;
   width: 14px;
   height: 14px;
   background: #38bdf8;
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 10px rgba(56,189,248,0.7);
 }
 
-/* Company logo box */
+/* Logo */
 .company-logo {
-  width: 70px;
-  height: 70px;
-  background: rgba(2, 6, 23, 0.9);
+  width: 60px;
+  height: 60px;
+  background: rgba(2,6,23,0.9);
   border: 1px solid #1e293b;
-  border-radius: 14px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin-right: 30px;
 }
 
 .company-logo img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
-/* Experience card */
+/* Card */
 .timeline-content {
-  background: rgba(2, 6, 23, 0.9);
+  background: rgba(2,6,23,0.9);
   border: 1px solid #1e293b;
   border-radius: 18px;
   padding: 30px;
   flex: 1;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .timeline-content:hover {
@@ -371,7 +383,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .timeline-header h3 {
@@ -397,6 +409,8 @@ section {
   color: #cbd5f5;
   line-height: 1.8;
 }
+  
+
 
 
 /* ---------- EDUCATION ---------- */
@@ -674,98 +688,102 @@ footer {
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="container">
-
-    <h2 class="section-title">Experience</h2>
-    <p class="section-sub">
-      Over 10 years of BIM leadership and multidisciplinary coordination
-    </p>
-
-    <div class="timeline">
-
-      <!-- ===== ITEM 1 ===== -->
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="company-logo">
-          <img src="assets/company/txg.png" alt="TXG Logo">
-        </div>
-
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>BIM Manager | Senior BIM Coordinator</h3>
-              <p class="company">Technical Expert Group (TXG)</p>
+  <div class="experience-box">
+    <div class="container">
+  
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">
+        Over 10 years of BIM leadership and multidisciplinary coordination
+      </p>
+  
+      <div class="timeline">
+  
+        <!-- ===== ITEM 1 ===== -->
+        <div class="timeline-item">
+  
+          <div class="timeline-dot"></div>
+  
+          <div class="company-logo">
+            <img src="assets/company/txg.png" alt="TXG Logo">
+          </div>
+  
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>BIM Manager | Senior BIM Coordinator</h3>
+                <p class="company">Technical Expert Group (TXG)</p>
+              </div>
+              <span class="duration">2024 – Present</span>
             </div>
-            <span class="duration">2024 – Present</span>
+  
+            <p class="timeline-text">
+              Lead BIM strategy, ISO 19650 implementation, multidisciplinary coordination,
+              QA/QC audits, clash detection management, and executive reporting across
+              hospitality and healthcare projects in Saudi Arabia.
+            </p>
+          </div>
+  
+        </div>
+  
+  
+        <!-- ===== ITEM 2 ===== -->
+        <div class="timeline-item">
+  
+          <div class="timeline-dot"></div>
+  
+          <div class="company-logo">
+            <img src="assets/company/ecec.png" alt="ECEC Logo">
+          </div>
+  
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Architecture BIM Specialist</h3>
+                <p class="company">ECEC</p>
+              </div>
+              <span class="duration">2022 – 2024</span>
+            </div>
+  
+            <p class="timeline-text">
+              Managed architectural BIM delivery, model federation,
+              coordination workflows, and ensured compliance with Saudi BIM
+              standards and client requirements.
+            </p>
           </div>
 
-          <p class="timeline-text">
-            Lead BIM strategy, ISO 19650 implementation, multidisciplinary coordination,
-            QA/QC audits, clash detection management, and executive reporting across
-            hospitality and healthcare projects in Saudi Arabia.
-          </p>
-        </div>
-
-      </div>
+       </div>
 
 
-      <!-- ===== ITEM 2 ===== -->
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="company-logo">
-          <img src="assets/company/ecec.png" alt="ECEC Logo">
-        </div>
-
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>Architecture BIM Specialist</h3>
-              <p class="company">ECEC</p>
-            </div>
-            <span class="duration">2022 – 2024</span>
+        <!-- ===== ITEM 3 ===== -->
+        <div class="timeline-item">
+  
+          <div class="timeline-dot"></div>
+  
+          <div class="company-logo">
+            <img src="assets/company/shapoorji.png" alt="Shapoorji Pallonji Logo">
           </div>
-
-          <p class="timeline-text">
-            Managed architectural BIM delivery, model federation,
-            coordination workflows, and ensured compliance with Saudi BIM
-            standards and client requirements.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- ===== ITEM 3 ===== -->
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="company-logo">
-          <img src="assets/company/shapoorji.png" alt="Shapoorji Pallonji Logo">
-        </div>
-
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>BIM Modeler</h3>
-              <p class="company">Shapoorji Pallonji</p>
+  
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>BIM Modeler</h3>
+                <p class="company">Shapoorji Pallonji</p>
+              </div>
+              <span class="duration">2019 – 2022</span>
             </div>
-            <span class="duration">2019 – 2022</span>
+  
+            <p class="timeline-text">
+              Developed LOD 400 BIM models, supported construction documentation,
+              and collaborated with site teams to ensure model-data alignment
+              across project lifecycle.
+            </p>
           </div>
-
-          <p class="timeline-text">
-            Developed LOD 400 BIM models, supported construction documentation,
-            and collaborated with site teams to ensure model-data alignment
-            across project lifecycle.
-          </p>
+  
         </div>
 
+        
       </div>
-
+      
     </div>
   </div>
 </section>
