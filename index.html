@@ -480,40 +480,47 @@ section {
 
   
 /* ---------- CONTACT ---------- */
-/* ===== CONTACT SECTION ===== */
+/* ================= CONTACT SECTION ================= */
 
 #contact {
-  margin: 80px auto 40px;;
+  padding: 40px 20px;
   text-align: center;
-  max-width: 600px;
 }
 
 .contact-title {
-  font-size: 38px;
-  /*color: #9fd3ff;*/
-  margin-bottom: 10px;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .contact-subtitle {
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 40px;
+  color: #94a3b8;
+  margin-bottom: 50px;
+  font-size: 15px;
 }
 
 /* FORM CARD */
 .contact-form {
-  background: #ffffff;
-  padding: 36px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid #1e293b;
+  padding: 40px;
   border-radius: 20px;
   text-align: left;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  max-width: 600px;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+.contact-form:hover {
+  border-color: #2563eb;
 }
 
 /* LABELS */
 .contact-form label {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 14px;
-  color: #0b1f2a;
+  color: #cbd5f5;
 }
 
 /* INPUTS */
@@ -522,34 +529,41 @@ section {
   width: 100%;
   padding: 12px 14px;
   margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #cfd9e3;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #ffffff;
   font-size: 14px;
+  transition: 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #4da3ff;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
 }
 
 /* BUTTON */
 .contact-form button {
   width: 100%;
-  padding: 12px;
-  margin-top: 14px;
+  padding: 14px;
+  margin-top: 20px;
   border-radius: 30px;
   border: none;
-  background: linear-gradient(135deg, #4da3ff, #2f7be5);
+  background: #2563eb;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .contact-form button:hover {
-  background: linear-gradient(135deg, #6bb5ff, #4da3ff);
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
+
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -1015,7 +1029,7 @@ footer {
 <section id="contact">
   <h2 class="contact-title">Get in touch</h2>
   <p class="contact-subtitle">
-    Do you have a project or opportunity in mind? Let’s talk about it.
+    Interested in collaborating or discussing a BIM opportunity? Feel free to reach out.
   </p>
 
   <form
@@ -1043,8 +1057,18 @@ footer {
   </form>
 </section>
 
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function () {
+    setTimeout(() => {
+      form.reset();
+    }, 500);
+  });
+</script>
+  
 <footer>
-  © 2026 Aromal Sarasan · BIM Manager Portfolio
+  © 2026 Aromal Sarasan · BIM Manager Portfolio . All rights reserved.
 </footer>
 
 </body>
