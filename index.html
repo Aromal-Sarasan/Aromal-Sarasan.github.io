@@ -265,13 +265,19 @@ section {
   padding: 30px 20px;
   text-align: center;
   transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-icon-card img {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  border-radius: 18px;
 }
 
 .skill-icon-card span {
@@ -286,23 +292,112 @@ section {
 }
 
 /* ---------- EXPERIENCE ---------- */
+
+#experience {
+  padding: 100px 20px;
+}
+
 .timeline {
-  border-left: 2px solid #1e293b;
-  padding-left: 24px;
+  position: relative;
+  margin-top: 60px;
+  padding-left: 80px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #1e293b;
 }
 
 .timeline-item {
-  margin-bottom: 32px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 70px;
 }
 
-.timeline-item h3 {
-  font-size: 18px;
+/* Blue glowing dot */
+.timeline-dot {
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
 }
 
-.timeline-item p {
-  color: #94a3b8;
+/* Company logo box */
+.company-logo {
+  width: 70px;
+  height: 70px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.company-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Experience card */
+.timeline-content {
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 30px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: #38bdf8;
+  transform: translateY(-4px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.timeline-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.company {
   font-size: 14px;
+  color: #94a3b8;
 }
+
+.duration {
+  font-size: 13px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.timeline-text {
+  font-size: 14px;
+  color: #cbd5f5;
+  line-height: 1.8;
+}
+
 
 /* ---------- EDUCATION ---------- */
 .edu-box {
@@ -580,27 +675,102 @@ footer {
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
+
     <h2 class="section-title">Experience</h2>
+    <p class="section-sub">
+      Over 10 years of BIM leadership and multidisciplinary coordination
+    </p>
 
     <div class="timeline">
+
+      <!-- ===== ITEM 1 ===== -->
       <div class="timeline-item">
-        <h3>BIM Manager | Senior BIM Coordinator</h3>
-        <p>Technical Expert Group (TXG) · 2024 – Present</p>
+
+        <div class="timeline-dot"></div>
+
+        <div class="company-logo">
+          <img src="assets/company/txg.png" alt="TXG Logo">
+        </div>
+
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3>BIM Manager | Senior BIM Coordinator</h3>
+              <p class="company">Technical Expert Group (TXG)</p>
+            </div>
+            <span class="duration">2024 – Present</span>
+          </div>
+
+          <p class="timeline-text">
+            Lead BIM strategy, ISO 19650 implementation, multidisciplinary coordination,
+            QA/QC audits, clash detection management, and executive reporting across
+            hospitality and healthcare projects in Saudi Arabia.
+          </p>
+        </div>
+
       </div>
 
+
+      <!-- ===== ITEM 2 ===== -->
       <div class="timeline-item">
-        <h3>Architecture BIM Specialist</h3>
-        <p>ECEC · 2022 – 2024</p>
+
+        <div class="timeline-dot"></div>
+
+        <div class="company-logo">
+          <img src="assets/company/ecec.png" alt="ECEC Logo">
+        </div>
+
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3>Architecture BIM Specialist</h3>
+              <p class="company">ECEC</p>
+            </div>
+            <span class="duration">2022 – 2024</span>
+          </div>
+
+          <p class="timeline-text">
+            Managed architectural BIM delivery, model federation,
+            coordination workflows, and ensured compliance with Saudi BIM
+            standards and client requirements.
+          </p>
+        </div>
+
       </div>
 
+
+      <!-- ===== ITEM 3 ===== -->
       <div class="timeline-item">
-        <h3>BIM Modeler</h3>
-        <p>Shapoorji Pallonji · 2019 – 2022</p>
+
+        <div class="timeline-dot"></div>
+
+        <div class="company-logo">
+          <img src="assets/company/shapoorji.png" alt="Shapoorji Pallonji Logo">
+        </div>
+
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3>BIM Modeler</h3>
+              <p class="company">Shapoorji Pallonji</p>
+            </div>
+            <span class="duration">2019 – 2022</span>
+          </div>
+
+          <p class="timeline-text">
+            Developed LOD 400 BIM models, supported construction documentation,
+            and collaborated with site teams to ensure model-data alignment
+            across project lifecycle.
+          </p>
+        </div>
+
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
   <div class="container">
     <h2 class="section-title">Education & Certifications</h2>
@@ -612,6 +782,9 @@ footer {
   </div>
 </section>
 
+<!-- CERTIFICATION -->
+  
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
