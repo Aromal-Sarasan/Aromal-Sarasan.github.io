@@ -467,10 +467,6 @@ section {
 }
   
 /* Ongoing styling */
-.cert-card.ongoing {
-  border-color: #f59e0b;
-}
-
 .cert-status {
   display: inline-block;
   padding: 8px 18px;
@@ -484,22 +480,75 @@ section {
 
   
 /* ---------- CONTACT ---------- */
+/* ===== CONTACT SECTION ===== */
+
 #contact {
+  margin: 80px auto 40px;;
   text-align: center;
-}
-
-.contact-box {
-  background: rgba(2, 6, 23, 0.8);
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 40px;
   max-width: 600px;
-  margin: auto;
 }
 
-.contact-box p {
-  margin-bottom: 14px;
-  color: #cbd5f5;
+.contact-title {
+  font-size: 38px;
+  /*color: #9fd3ff;*/
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+}
+
+/* FORM CARD */
+.contact-form {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+/* LABELS */
+.contact-form label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #0b1f2a;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cfd9e3;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4da3ff;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #4da3ff, #2f7be5);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #6bb5ff, #4da3ff);
 }
 
 /* ---------- FOOTER ---------- */
@@ -931,7 +980,7 @@ footer {
       </div>
 
       <!-- ONGOING CERTIFICATE 3 -->
-      <div class="cert-card ongoing">
+      <div class="cert-card">
       
         <img src="assets/certificates/rics-bim.jpg"
              alt="RICS BIM Management">
@@ -964,14 +1013,34 @@ footer {
   
 <!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-box">
-      <p>📍 Riyadh, Saudi Arabia</p>
-      <p>📧 aromalsaras@gmail.com</p>
-      <a href="mailto:aromalsaras@gmail.com" class="btn-primary">Send Email</a>
-    </div>
-  </div>
+  <h2 class="contact-title">Get in touch</h2>
+  <p class="contact-subtitle">
+    Do you have a project or opportunity in mind? Let’s talk about it.
+  </p>
+
+  <form
+    id="contact-form"
+    class="contact-form"
+    action="https://formspree.io/f/mbdarbbd"
+    method="POST"
+  >
+    <label>
+      Name *
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email Address *
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Message *
+      <textarea name="message" rows="4" required></textarea>
+    </label>
+
+    <button type="submit">SEND</button>
+  </form>
 </section>
 
 <footer>
