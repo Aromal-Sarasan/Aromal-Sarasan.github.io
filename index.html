@@ -624,6 +624,60 @@ section {
 
 }
 
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  /* Timeline width */
+  .timeline {
+    width: 100%;
+  }
+
+  /* Projects grid */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Skills grid */
+  .skills-grid-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  .skills-grid-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    padding-left: 55px;
+  }
+
+}
   
 
 /* ---------- FOOTER ---------- */
