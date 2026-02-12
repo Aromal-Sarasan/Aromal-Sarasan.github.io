@@ -253,9 +253,9 @@ section {
 
 .skills-grid-icons {
   display: grid;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-items: center;
   margin-top: 40px;
 }
 
@@ -263,10 +263,10 @@ section {
   background: rgba(2, 6, 23, 0.85);
   border: 1px solid #1e293b;
   border-radius: 18px;
-  padding: 30px 20px;
+  width: 180px;
+  padding: 24px 16px;
   text-align: center;
   transition: all 0.3s ease;
-  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,8 +274,8 @@ section {
 }
 
 .skill-icon-card img {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   margin-bottom: 16px;
   border-radius: 18px;
